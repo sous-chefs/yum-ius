@@ -3,7 +3,7 @@
 default['yum']['ius']['repositoryid'] = 'ius'
 default['yum']['ius']['enabled'] = true
 default['yum']['ius']['failovermethod'] = 'priority'
-default['yum']['ius']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
+default['yum']['ius']['gpgkey'] = 'http://dl.iuscommunity.org/pub/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius']['gpgcheck'] = true
 case node['platform_version'].to_i
 when 5
