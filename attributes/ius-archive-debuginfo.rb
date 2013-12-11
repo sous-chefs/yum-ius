@@ -1,5 +1,3 @@
-# Encoding: utf-8
-
 default['yum']['ius-archive-debuginfo']['repositoryid'] = 'ius-archive-debuginfo'
 default['yum']['ius-archive-debuginfo']['enabled'] = false
 default['yum']['ius-archive-debuginfo']['failovermethod'] = 'priority'

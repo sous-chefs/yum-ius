@@ -1,5 +1,3 @@
-# Encoding: utf-8
-
 default['yum']['ius-testing-source']['repositoryid'] = 'ius-testing-source'
 default['yum']['ius-testing-source']['enabled'] = false
 default['yum']['ius-testing-source']['failovermethod'] = 'priority'

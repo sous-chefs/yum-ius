@@ -1,5 +1,3 @@
-# Encoding: utf-8
-
 default['yum']['ius-archive-source']['repositoryid'] = 'ius-archive-source'
 default['yum']['ius-archive-source']['enabled'] = false
 default['yum']['ius-archive-source']['failovermethod'] = 'priority'

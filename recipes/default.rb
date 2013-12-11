@@ -1,6 +1,5 @@
-# Encoding: utf-8
 #
-# Author:: Sean OMeara (<someara@opscode.com>)
+# Author:: Sean OMeara (<someara@getchef.com>)
 # Recipe:: yum-ius::default
 #
 # Copyright 2013, Opscode
