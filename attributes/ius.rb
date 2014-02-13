@@ -1,5 +1,6 @@
 default['yum']['ius']['repositoryid'] = 'ius'
 default['yum']['ius']['enabled'] = true
+default['yum']['ius']['managed'] = true
 default['yum']['ius']['failovermethod'] = 'priority'
 default['yum']['ius']['gpgkey'] = 'http://dl.iuscommunity.org/pub/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius']['gpgcheck'] = true

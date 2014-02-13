@@ -20,6 +20,7 @@ The following attributes are set by default
 ``` ruby
 default['yum']['ius']['repositoryid'] = 'ius'
 default['yum']['ius']['enabled'] = true
+default['yum']['ius']['managed'] = true
 default['yum']['ius']['failovermethod'] = 'priority'
 default['yum']['ius']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius']['gpgcheck'] = true
@@ -30,6 +31,7 @@ default['yum']['ius']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/
 ``` ruby
 default['yum']['ius-debuginfo']['repositoryid'] = 'ius-debuginfo'
 default['yum']['ius-debuginfo']['enabled'] = false
+default['yum']['ius-debuginfo']['managed'] = false
 default['yum']['ius-debuginfo']['failovermethod'] = 'priority'
 default['yum']['ius-debuginfo']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-debuginfo']['gpgcheck'] = true
@@ -40,6 +42,7 @@ default['yum']['ius-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommunity.org/m
 ``` ruby
 default['yum']['ius-source']['repositoryid'] = 'ius-source'
 default['yum']['ius-source']['enabled'] = false
+default['yum']['ius-source']['managed'] = false
 default['yum']['ius-source']['failovermethod'] = 'priority'
 default['yum']['ius-source']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-source']['gpgcheck'] = true
@@ -50,6 +53,7 @@ default['yum']['ius-source']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirr
 ``` ruby
 default['yum']['ius-archive']['repositoryid'] = 'ius-archive'
 default['yum']['ius-archive']['enabled'] = false
+default['yum']['ius-archive']['managed'] = false
 default['yum']['ius-archive']['failovermethod'] = 'priority'
 default['yum']['ius-archive']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-archive']['gpgcheck'] = true
@@ -60,6 +64,7 @@ default['yum']['ius-archive']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mir
 ``` ruby
 default['yum']['ius-archive-debuginfo']['repositoryid'] = 'ius-archive-debuginfo'
 default['yum']['ius-archive-debuginfo']['enabled'] = false
+default['yum']['ius-archive-debuginfo']['managed'] = false
 default['yum']['ius-archive-debuginfo']['failovermethod'] = 'priority'
 default['yum']['ius-archive-debuginfo']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-archive-debuginfo']['gpgcheck'] = true
@@ -70,6 +75,7 @@ default['yum']['ius-archive-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommuni
 ``` ruby
 default['yum']['ius-archive-source']['repositoryid'] = 'ius-archive-source'
 default['yum']['ius-archive-source']['enabled'] = false
+default['yum']['ius-archive-source']['managed'] = false
 default['yum']['ius-archive-source']['failovermethod'] = 'priority'
 default['yum']['ius-archive-source']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-archive-source']['gpgcheck'] = true
@@ -80,6 +86,7 @@ default['yum']['ius-archive-source']['mirrorlist'] = 'http://dmirr.iuscommunity.
 ``` ruby
 default['yum']['ius-testing']['repositoryid'] = 'ius-testing'
 default['yum']['ius-testing']['enabled'] = false
+default['yum']['ius-testing']['managed'] = false
 default['yum']['ius-testing']['failovermethod'] = 'priority'
 default['yum']['ius-testing']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-testing']['gpgcheck'] = true
@@ -90,6 +97,7 @@ default['yum']['ius-testing']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mir
 ``` ruby
 default['yum']['ius-testing-debuginfo']['repositoryid'] = 'ius-testing-debuginfo'
 default['yum']['ius-testing-debuginfo']['enabled'] = false
+default['yum']['ius-testing-debuginfo']['managed'] = false
 default['yum']['ius-testing-debuginfo']['failovermethod'] = 'priority'
 default['yum']['ius-testing-debuginfo']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-testing-debuginfo']['gpgcheck'] = true
@@ -100,6 +108,7 @@ default['yum']['ius-testing-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommuni
 ``` ruby
 default['yum']['ius-testing-source']['repositoryid'] = 'ius-testing-source'
 default['yum']['ius-testing-source']['enabled'] = false
+default['yum']['ius-testing-source']['managed'] = false
 default['yum']['ius-testing-source']['failovermethod'] = 'priority'
 default['yum']['ius-testing-source']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-testing-source']['gpgcheck'] = true
@@ -110,6 +119,7 @@ default['yum']['ius-testing-source']['mirrorlist'] = 'http://dmirr.iuscommunity.
 ``` ruby
 default['yum']['ius-dev']['repositoryid'] = 'ius-dev'
 default['yum']['ius-dev']['enabled'] = false
+default['yum']['ius-dev']['managed'] = false
 default['yum']['ius-dev']['failovermethod'] = 'priority'
 default['yum']['ius-dev']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-dev']['gpgcheck'] = true
@@ -120,6 +130,7 @@ default['yum']['ius-dev']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorl
 ``` ruby
 default['yum']['ius-dev-debuginfo']['repositoryid'] = 'ius-dev-debuginfo'
 default['yum']['ius-dev-debuginfo']['enabled'] = false
+default['yum']['ius-dev-debuginfo']['managed'] = false
 default['yum']['ius-dev-debuginfo']['failovermethod'] = 'priority'
 default['yum']['ius-dev-debuginfo']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-dev-debuginfo']['gpgcheck'] = true
@@ -130,6 +141,7 @@ default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommunity.o
 ``` ruby
 default['yum']['ius-dev-source']['repositoryid'] = 'ius-dev-source'
 default['yum']['ius-dev-source']['enabled'] = false
+default['yum']['ius-dev-source']['managed'] = false
 default['yum']['ius-dev-source']['failovermethod'] = 'priority'
 default['yum']['ius-dev-source']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-dev-source']['gpgcheck'] = true
@@ -170,10 +182,13 @@ default_attributes(
  )
 ```
 
-To enable the `ius-testing` repository with a wrapper cookbook, place
-the following in a recipe:
+Uncommonly used repositoryids are not managed by default. This is
+speeds up integration testing pipelines by avoiding yum-cache builds
+that nobody cares about. To enable the `ius-testing` repository with a
+wrapper cookbook, place the following in a recipe:
 
 ```
+node.default['yum']['ius-tesing']['managed'] = true
 node.default['yum']['ius-tesing']['enabled'] = true
 include_recipe 'yum-ius'
 ```
