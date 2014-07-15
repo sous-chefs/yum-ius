@@ -31,6 +31,8 @@
   ius-dev-source
  }.each do |repo|
   if node['yum'][repo]['managed']
+    include_recipe 'yum-epel' unless run_context.loaded_recipe?('yum-epel')
+
     yum_repository repo do
       description node['yum'][repo]['description']
       baseurl node['yum'][repo]['baseurl']
