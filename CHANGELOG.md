@@ -1,6 +1,10 @@
 yum-ius Cookbook CHANGELOG
 ======================
-This file is used to list changes made in each version of the yum-centos cookbook.
+This file is used to list changes made in each version of the yum-ius cookbook.
+
+v0.3.0 (2014-09-11)
+-------------------
+- Add the yum-epel::default recipe if at least one yum-ius repository managed
 
 v0.2.0 (2014-02-14)
 -------------------
