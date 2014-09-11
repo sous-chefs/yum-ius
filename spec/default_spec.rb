@@ -20,7 +20,7 @@ describe 'yum-ius::default' do
       end.converge(described_recipe)
     end
 
-    %w{
+    %w(
       ius
       ius-debuginfo
       ius-source
@@ -33,7 +33,7 @@ describe 'yum-ius::default' do
       ius-dev
       ius-dev-debuginfo
       ius-dev-source
-    }.each do |repo|
+    ).each do |repo|
       it "creates yum_repository[#{repo}]" do
         expect(chef_run).to create_yum_repository(repo)
       end
