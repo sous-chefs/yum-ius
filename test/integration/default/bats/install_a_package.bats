@@ -1,3 +1,3 @@
 @test "install a package" {
-  sudo yum -y install python33-redis
+  sudo yum -y install php56u-pgsql
 }
