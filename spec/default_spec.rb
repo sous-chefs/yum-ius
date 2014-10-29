@@ -4,7 +4,7 @@ describe 'yum-ius::default' do
   context 'yum-ius::default uses default attributes' do
 
     let(:chef_run) do
-      ChefSpec::Runner.new do |node|
+      ChefSpec::SoloRunner.new do |node|
         node.set['yum']['ius']['managed'] = true
         node.set['yum']['ius-debuginfo']['managed'] = true
         node.set['yum']['ius-source']['managed'] = true
