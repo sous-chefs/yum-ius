@@ -1,3 +1,3 @@
-site :chef
+site 'https://supermarket.chef.io'
 
 metadata
