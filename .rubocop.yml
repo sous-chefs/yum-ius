@@ -22,3 +22,6 @@ Style/FileName:
 # Configuration parameters: EnforcedStyle, MinBodyLength, SupportedStyles.
 Style/Next:
   Enabled: false
+
+Style/RegexpLiteral:
+  AllowInnerSlashes: true

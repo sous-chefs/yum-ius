@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe 'yum-ius::default' do
   context 'yum-ius::default uses default attributes' do
-
     let(:chef_run) do
       ChefSpec::SoloRunner.new do |node|
         node.set['yum']['ius']['managed'] = true
