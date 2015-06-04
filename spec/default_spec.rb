@@ -75,7 +75,7 @@ describe 'yum-ius::default' do
       it "creates yum_repository[#{repo}] with Redhat repo used in mirrorlist" do
         mirror_repo = repo.sub('ius', 'ius-el6')
         expect(chef_run).to create_yum_repository(repo).with(
-          :mirrorlist => "http://dmirr.iuscommunity.org/mirrorlist/?repo=#{mirror_repo}&arch=$basearch"
+          :mirrorlist => "https://mirrors.iuscommunity.org/mirrorlist/?repo=#{mirror_repo}&arch=$basearch&protocol=http"
         )
       end
     end
@@ -116,7 +116,7 @@ describe 'yum-ius::default' do
       it "creates yum_repository[#{repo}] with CentOS repo used in mirrorlist" do
         mirror_repo = repo.sub('ius', 'ius-centos6')
         expect(chef_run).to create_yum_repository(repo).with(
-          :mirrorlist => "http://dmirr.iuscommunity.org/mirrorlist/?repo=#{mirror_repo}&arch=$basearch"
+          :mirrorlist => "https://mirrors.iuscommunity.org/mirrorlist/?repo=#{mirror_repo}&arch=$basearch&protocol=http"
         )
       end
     end

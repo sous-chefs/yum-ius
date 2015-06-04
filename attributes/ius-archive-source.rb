@@ -17,19 +17,19 @@ case node['platform']
 when 'redhat'
   case node['platform_version'].to_i
   when 5
-    default['yum']['ius-archive-source']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el5-archive-source&arch=$basearch'
+    default['yum']['ius-archive-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el5-archive-source&arch=$basearch&protocol=http'
   when 6
-    default['yum']['ius-archive-source']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-archive-source&arch=$basearch'
+    default['yum']['ius-archive-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-archive-source&arch=$basearch&protocol=http'
   when 7
-    default['yum']['ius-archive-source']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el7-archive-source&arch=$basearch'
+    default['yum']['ius-archive-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el7-archive-source&arch=$basearch&protocol=http'
   end
 else
   case node['platform_version'].to_i
   when 5
-    default['yum']['ius-archive-source']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos5-archive-source&arch=$basearch'
+    default['yum']['ius-archive-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-centos5-archive-source&arch=$basearch&protocol=http'
   when 6
-    default['yum']['ius-archive-source']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-archive-source&arch=$basearch'
+    default['yum']['ius-archive-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-centos6-archive-source&arch=$basearch&protocol=http'
   when 7
-    default['yum']['ius-archive-source']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-archive-source&arch=$basearch'
+    default['yum']['ius-archive-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-centos7-archive-source&arch=$basearch&protocol=http'
   end
 end

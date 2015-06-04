@@ -17,19 +17,19 @@ case node['platform']
 when 'redhat'
   case node['platform_version'].to_i
   when 5
-    default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el5-dev-debuginfo&arch=$basearch'
+    default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el5-dev-debuginfo&arch=$basearch&protocol=http'
   when 6
-    default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-dev-debuginfo&arch=$basearch'
+    default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-dev-debuginfo&arch=$basearch&protocol=http'
   when 7
-    default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el7-dev-debuginfo&arch=$basearch'
+    default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el7-dev-debuginfo&arch=$basearch&protocol=http'
   end
 else
   case node['platform_version'].to_i
   when 5
-    default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos5-dev-debuginfo&arch=$basearch'
+    default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-centos5-dev-debuginfo&arch=$basearch&protocol=http'
   when 6
-    default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-dev-debuginfo&arch=$basearch'
+    default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-centos6-dev-debuginfo&arch=$basearch&protocol=http'
   when 7
-    default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-dev-debuginfo&arch=$basearch'
+    default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-centos7-dev-debuginfo&arch=$basearch&protocol=http'
   end
 end
