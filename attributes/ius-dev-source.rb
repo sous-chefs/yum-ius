@@ -6,6 +6,11 @@ default['yum']['ius-dev-source']['gpgkey'] = 'https://dl.iuscommunity.org/pub/iu
 default['yum']['ius-dev-source']['gpgcheck'] = true
 case node['platform_version'].to_i
 when 5
+  default['yum']['ius-archive-debuginfo']['sslverify'] = false
+end
+
+case node['platform_version'].to_i
+when 5
   default['yum']['ius-dev-source']['description'] = 'IUS Community Packages for Enterprise Linux 5 - $basearch Dev Source'
 when 6
   default['yum']['ius-dev-source']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Dev Source'

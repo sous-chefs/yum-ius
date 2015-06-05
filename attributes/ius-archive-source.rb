@@ -6,6 +6,11 @@ default['yum']['ius-archive-source']['gpgkey'] = 'https://dl.iuscommunity.org/pu
 default['yum']['ius-archive-source']['gpgcheck'] = true
 case node['platform_version'].to_i
 when 5
+  default['yum']['ius-archive-debuginfo']['sslverify'] = false
+end
+
+case node['platform_version'].to_i
+when 5
   default['yum']['ius-archive-source']['description'] = 'IUS Community Packages for Enterprise Linux 5 - $basearch Archive Source'
 when 6
   default['yum']['ius-archive-source']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Archive Source'

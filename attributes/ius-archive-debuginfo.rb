@@ -4,6 +4,10 @@ default['yum']['ius-archive-debuginfo']['managed'] = false
 default['yum']['ius-archive-debuginfo']['failovermethod'] = 'priority'
 default['yum']['ius-archive-debuginfo']['gpgkey'] = 'https://dl.iuscommunity.org/pub/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-archive-debuginfo']['gpgcheck'] = true
+case node['platform_version'].to_i
+when 5
+  default['yum']['ius-archive-debuginfo']['sslverify'] = false
+end
 
 case node['platform_version'].to_i
 when 5
