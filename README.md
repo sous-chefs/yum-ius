@@ -25,7 +25,7 @@ default['yum']['ius']['failovermethod'] = 'priority'
 default['yum']['ius']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius']['gpgcheck'] = true
 default['yum']['ius']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch'
-default['yum']['ius']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6&arch=$basearch'
+default['yum']['ius']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6&arch=$basearch&protocol=http'
 ```
 
 ``` ruby
@@ -36,7 +36,7 @@ default['yum']['ius-debuginfo']['failovermethod'] = 'priority'
 default['yum']['ius-debuginfo']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-debuginfo']['gpgcheck'] = true
 default['yum']['ius-debuginfo']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Debug'
-default['yum']['ius-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-debuginfo&arch=$basearch'
+default['yum']['ius-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-debuginfo&arch=$basearch&protocol=http'
 ```
 
 ``` ruby
@@ -47,7 +47,7 @@ default['yum']['ius-source']['failovermethod'] = 'priority'
 default['yum']['ius-source']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-source']['gpgcheck'] = true
 default['yum']['ius-source']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Source'
-default['yum']['ius-source']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-source&arch=$basearch'
+default['yum']['ius-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-source&arch=$basearch&protocol=http'
 ```
 
 ``` ruby
@@ -58,7 +58,7 @@ default['yum']['ius-archive']['failovermethod'] = 'priority'
 default['yum']['ius-archive']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-archive']['gpgcheck'] = true
 default['yum']['ius-archive']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Archive'
-default['yum']['ius-archive']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-archive&arch=$basearch'
+default['yum']['ius-archive']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-archive&arch=$basearch&protocol=http'
 ```
 
 ``` ruby
@@ -69,7 +69,7 @@ default['yum']['ius-archive-debuginfo']['failovermethod'] = 'priority'
 default['yum']['ius-archive-debuginfo']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-archive-debuginfo']['gpgcheck'] = true
 default['yum']['ius-archive-debuginfo']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Archive Debug'
-default['yum']['ius-archive-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-archive-debuginfo&arch=$basearch'
+default['yum']['ius-archive-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-archive-debuginfo&arch=$basearch&protocol=http'
 ```
 
 ``` ruby
@@ -80,7 +80,7 @@ default['yum']['ius-archive-source']['failovermethod'] = 'priority'
 default['yum']['ius-archive-source']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-archive-source']['gpgcheck'] = true
 default['yum']['ius-archive-source']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Archive Source'
-default['yum']['ius-archive-source']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-archive-source&arch=$basearch'
+default['yum']['ius-archive-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-archive-source&arch=$basearch&protocol=http'
 ```
 
 ``` ruby
@@ -91,7 +91,7 @@ default['yum']['ius-testing']['failovermethod'] = 'priority'
 default['yum']['ius-testing']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-testing']['gpgcheck'] = true
 default['yum']['ius-testing']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Testing'
-default['yum']['ius-testing']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-testing&arch=$basearch'
+default['yum']['ius-testing']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-testing&arch=$basearch&protocol=http'
 ```
 
 ``` ruby
@@ -102,7 +102,7 @@ default['yum']['ius-testing-debuginfo']['failovermethod'] = 'priority'
 default['yum']['ius-testing-debuginfo']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-testing-debuginfo']['gpgcheck'] = true
 default['yum']['ius-testing-debuginfo']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Testing Debug'
-default['yum']['ius-testing-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-testing-debuginfo&arch=$basearch'
+default['yum']['ius-testing-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-testing-debuginfo&arch=$basearch&protocol=http'
 ```
 
 ``` ruby
@@ -113,7 +113,7 @@ default['yum']['ius-testing-source']['failovermethod'] = 'priority'
 default['yum']['ius-testing-source']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-testing-source']['gpgcheck'] = true
 default['yum']['ius-testing-source']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Testing Source'
-default['yum']['ius-testing-source']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-testing-source&arch=$basearch'
+default['yum']['ius-testing-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-testing-source&arch=$basearch&protocol=http'
 ```
 
 ``` ruby
@@ -124,7 +124,7 @@ default['yum']['ius-dev']['failovermethod'] = 'priority'
 default['yum']['ius-dev']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-dev']['gpgcheck'] = true
 default['yum']['ius-dev']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Dev'
-default['yum']['ius-dev']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-dev&arch=$basearch'
+default['yum']['ius-dev']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-dev&arch=$basearch&protocol=http'
 ```
 
 ``` ruby
@@ -135,7 +135,7 @@ default['yum']['ius-dev-debuginfo']['failovermethod'] = 'priority'
 default['yum']['ius-dev-debuginfo']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-dev-debuginfo']['gpgcheck'] = true
 default['yum']['ius-dev-debuginfo']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Dev Debug Info'
-default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-dev-debuginfo&arch=$basearch'
+default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-dev-debuginfo&arch=$basearch&protocol=http'
 ```
 
 ``` ruby
@@ -146,7 +146,7 @@ default['yum']['ius-dev-source']['failovermethod'] = 'priority'
 default['yum']['ius-dev-source']['gpgkey'] = 'http://mirror.its.dal.ca/ius/IUS-COMMUNITY-GPG-KEY'
 default['yum']['ius-dev-source']['gpgcheck'] = true
 default['yum']['ius-dev-source']['description'] = 'IUS Community Packages for Enterprise Linux 6 - $basearch Dev Source'
-default['yum']['ius-dev-source']['mirrorlist'] = 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6-dev-source&arch=$basearch'
+default['yum']['ius-dev-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-dev-source&arch=$basearch&protocol=http'
 ```
 
 
@@ -158,7 +158,7 @@ Recipes
 
 ```ruby
   yum_repository 'ius' do
-    mirrorlist 'http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el6&arch=$basearch'
+    mirrorlist 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6&arch=$basearch&protocol=http'
     description 'IUS Community Packages for Enterprise Linux 6 - $basearch'
     enabled true
     gpgcheck true
