@@ -2,6 +2,11 @@ yum-ius Cookbook CHANGELOG
 ======================
 This file is used to list changes made in each version of the yum-ius cookbook.
 
+v0.4.1 (2015-06-21)
+-------------------
+- Updating URLs for https and new mirrorlists
+- Depending on yum ~> 3.2
+
 v0.4.0 (2014-10-29)
 -------------------
 - Accounting for differences between RHEL and Centos
