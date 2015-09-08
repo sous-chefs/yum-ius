@@ -8,3 +8,6 @@ version '0.4.1'
 
 depends 'yum', '~> 3.2'
 depends 'yum-epel'
+
+source_url 'https://github.com/chef-cookbooks/yum-ius' if respond_to?(:source_url)
+issues_url 'https://github.com/chef-cookbooks/yum-ius/issues' if respond_to?(:issues_url)
