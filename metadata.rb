@@ -4,7 +4,7 @@ maintainer_email 'cookbooks@chef.io'
 license 'Apache 2.0'
 description 'Installs and configures the IUS Community Project Yum Repository'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '0.4.1'
+version '0.4.2'
 
 depends 'yum', '~> 3.2'
 depends 'yum-epel'

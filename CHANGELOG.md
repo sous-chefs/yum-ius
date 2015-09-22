@@ -2,6 +2,19 @@ yum-ius Cookbook CHANGELOG
 ======================
 This file is used to list changes made in each version of the yum-ius cookbook.
 
+v0.4.2 (2015-09-21)
+
+- Added Chef standard Rubocop file and resolved all warnings
+- Updated platforms in Kitchen CI config
+- Add supported platforms to the metadata
+- Added Chef standard chefignore and .gitignore files
+- Updated and expanded development dependencies in the Gemfile
+- Added contributing, testing, and maintainers docs
+- Added platform requirements to the readme
+- Added Travis and cookbook version badges to the readme
+- Update Chefspec to 4.X format
+- Convert all hash rockets to the Ruby 1.9+ hash format
+
 v0.4.1 (2015-06-21)
 -------------------
 - Updating URLs for https and new mirrorlists
