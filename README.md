@@ -12,8 +12,17 @@ manipulation of `ius`, `ius-debuginfo`, `ius-source`, `ius-archive`,
 
 Requirements
 ------------
-* Chef 11 or higher
-* yum cookbook version 3.0.0 or higher
+#### Platforms
+* RHEL/CentOS and derivatives
+* Fedora
+
+#### Chef
+* Chef 11+
+
+#### Cookbooks
+* yum version 3.2.0 or higher
+* yum-epel
+
 
 Attributes
 ----------
