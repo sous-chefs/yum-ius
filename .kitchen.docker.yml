@@ -21,6 +21,11 @@ platforms:
   driver:
     image: centos:7
 
+matrix:
+  INSTANCE=default-centos-5
+  INSTANCE=default-centos-6
+  INSTANCE=default-centos-7
+
 suites:
 - name: default
   run_list:
