@@ -25,4 +25,41 @@ suites:
 - name: default
   run_list:
   - recipe[yum-ius::default]
-  attributes: {}
+  attributes:
+    yum:
+      ius:
+        enabled: true
+        managed: true
+      ius-debuginfo:
+        enabled: true
+        managed: true
+      ius-source:
+        enabled: true
+        managed: true
+      ius-testing:
+        enabled: true
+        managed: true
+      ius-testing-debuginfo:
+        enabled: true
+        managed: true
+      ius-testing-source:
+        enabled: true
+        managed: true
+      ius-dev:
+        enabled: true
+        managed: true
+      ius-dev-debuginfo:
+        enabled: true
+        managed: true
+      ius-dev-source:
+        enabled: true
+        managed: true
+      ius-archive:
+        enabled: true
+        managed: true
+      ius-archive-debuginfo:
+        enabled: true
+        managed: true
+      ius-archive-source:
+        enabled: true
+        managed: true
