@@ -30,7 +30,7 @@
   ius-dev-debuginfo
   ius-dev-source
 ).each do |repo|
-  next if node['yum'][repo]['managed']
+  next unless node['yum'][repo]['managed']
   include_recipe 'yum-epel' unless run_context.loaded_recipe?('yum-epel')
 
   yum_repository repo do
