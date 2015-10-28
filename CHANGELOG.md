@@ -2,6 +2,10 @@ yum-ius Cookbook CHANGELOG
 ======================
 This file is used to list changes made in each version of the yum-ius cookbook.
 
+v0.4.4 (2015-10-28)
+-------------------
+- Fixing logic bug around managed attribute
+
 v0.4.3 (2015-10-28)
 -------------------
 - Fixing Chef 13 nil property deprecation warnings
