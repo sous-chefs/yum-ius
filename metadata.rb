@@ -3,7 +3,7 @@ maintainer 'Chef Software, Inc.'
 maintainer_email 'cookbooks@chef.io'
 license 'Apache 2.0'
 description 'Installs and configures the IUS Community Project Yum Repository'
-version '0.4.4'
+version '0.4.5'
 
 depends 'yum', '~> 3.2'
 depends 'yum-epel'

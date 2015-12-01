@@ -1,6 +1,9 @@
 # yum-ius Cookbook CHANGELOG
 This file is used to list changes made in each version of the yum-ius cookbook.
 
+## v0.4.5 (2015-11-30)
+- Fixed attributes with a false value being skipped
+
 ## v0.4.4 (2015-10-28)
 - Fixing logic bug around managed attribute
 
