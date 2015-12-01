@@ -1,34 +1,24 @@
-yum-ius Cookbook
-============
-[![Build Status](https://travis-ci.org/chef-cookbooks/yum-ius.svg?branch=master)](http://travis-ci.org/chef-cookbooks/yum-ius)
-[![Cookbook Version](https://img.shields.io/cookbook/v/yum-ius.svg)](https://supermarket.chef.io/cookbooks/yum-ius)
+# yum-ius Cookbook
+[![Build Status](https://travis-ci.org/chef-cookbooks/yum-ius.svg?branch=master)](http://travis-ci.org/chef-cookbooks/yum-ius) [![Cookbook Version](https://img.shields.io/cookbook/v/yum-ius.svg)](https://supermarket.chef.io/cookbooks/yum-ius)
 
-The yum-ius cookbook takes over management of the default
-repositoryids that ship with CentOS systems. It allows attribute
-manipulation of `ius`, `ius-debuginfo`, `ius-source`, `ius-archive`,
-`ius-archive-debuginfo`, `ius-archive-source`, `ius-testing`,
-`ius-testing-debuginfo`, `ius-testing-source`, `ius-dev`,
-`ius-dev-debuginfo`, `ius-dev-source`
+The yum-ius cookbook takes over management of the default repositoryids that ship with CentOS systems. It allows attribute manipulation of `ius`, `ius-debuginfo`, `ius-source`, `ius-archive`, `ius-archive-debuginfo`, `ius-archive-source`, `ius-testing`, `ius-testing-debuginfo`, `ius-testing-source`, `ius-dev`, `ius-dev-debuginfo`, `ius-dev-source`
 
-Requirements
-------------
-#### Platforms
-* RHEL/CentOS and derivatives
-* Fedora
+## Requirements
+### Platforms
+- RHEL/CentOS and derivatives
+- Fedora
 
-#### Chef
-* Chef 11+
+### Chef
+- Chef 11+
 
-#### Cookbooks
-* yum version 3.2.0 or higher
-* yum-epel
+### Cookbooks
+- yum version 3.2.0 or higher
+- yum-epel
 
-
-Attributes
-----------
+## Attributes
 The following attributes are set by default
 
-``` ruby
+```ruby
 default['yum']['ius']['repositoryid'] = 'ius'
 default['yum']['ius']['enabled'] = true
 default['yum']['ius']['managed'] = true
@@ -39,7 +29,7 @@ default['yum']['ius']['description'] = 'IUS Community Packages for Enterprise Li
 default['yum']['ius']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6&arch=$basearch&protocol=http'
 ```
 
-``` ruby
+```ruby
 default['yum']['ius-debuginfo']['repositoryid'] = 'ius-debuginfo'
 default['yum']['ius-debuginfo']['enabled'] = false
 default['yum']['ius-debuginfo']['managed'] = false
@@ -50,7 +40,7 @@ default['yum']['ius-debuginfo']['description'] = 'IUS Community Packages for Ent
 default['yum']['ius-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-debuginfo&arch=$basearch&protocol=http'
 ```
 
-``` ruby
+```ruby
 default['yum']['ius-source']['repositoryid'] = 'ius-source'
 default['yum']['ius-source']['enabled'] = false
 default['yum']['ius-source']['managed'] = false
@@ -61,7 +51,7 @@ default['yum']['ius-source']['description'] = 'IUS Community Packages for Enterp
 default['yum']['ius-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-source&arch=$basearch&protocol=http'
 ```
 
-``` ruby
+```ruby
 default['yum']['ius-archive']['repositoryid'] = 'ius-archive'
 default['yum']['ius-archive']['enabled'] = false
 default['yum']['ius-archive']['managed'] = false
@@ -72,7 +62,7 @@ default['yum']['ius-archive']['description'] = 'IUS Community Packages for Enter
 default['yum']['ius-archive']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-archive&arch=$basearch&protocol=http'
 ```
 
-``` ruby
+```ruby
 default['yum']['ius-archive-debuginfo']['repositoryid'] = 'ius-archive-debuginfo'
 default['yum']['ius-archive-debuginfo']['enabled'] = false
 default['yum']['ius-archive-debuginfo']['managed'] = false
@@ -83,7 +73,7 @@ default['yum']['ius-archive-debuginfo']['description'] = 'IUS Community Packages
 default['yum']['ius-archive-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-archive-debuginfo&arch=$basearch&protocol=http'
 ```
 
-``` ruby
+```ruby
 default['yum']['ius-archive-source']['repositoryid'] = 'ius-archive-source'
 default['yum']['ius-archive-source']['enabled'] = false
 default['yum']['ius-archive-source']['managed'] = false
@@ -94,7 +84,7 @@ default['yum']['ius-archive-source']['description'] = 'IUS Community Packages fo
 default['yum']['ius-archive-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-archive-source&arch=$basearch&protocol=http'
 ```
 
-``` ruby
+```ruby
 default['yum']['ius-testing']['repositoryid'] = 'ius-testing'
 default['yum']['ius-testing']['enabled'] = false
 default['yum']['ius-testing']['managed'] = false
@@ -105,7 +95,7 @@ default['yum']['ius-testing']['description'] = 'IUS Community Packages for Enter
 default['yum']['ius-testing']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-testing&arch=$basearch&protocol=http'
 ```
 
-``` ruby
+```ruby
 default['yum']['ius-testing-debuginfo']['repositoryid'] = 'ius-testing-debuginfo'
 default['yum']['ius-testing-debuginfo']['enabled'] = false
 default['yum']['ius-testing-debuginfo']['managed'] = false
@@ -116,7 +106,7 @@ default['yum']['ius-testing-debuginfo']['description'] = 'IUS Community Packages
 default['yum']['ius-testing-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-testing-debuginfo&arch=$basearch&protocol=http'
 ```
 
-``` ruby
+```ruby
 default['yum']['ius-testing-source']['repositoryid'] = 'ius-testing-source'
 default['yum']['ius-testing-source']['enabled'] = false
 default['yum']['ius-testing-source']['managed'] = false
@@ -127,7 +117,7 @@ default['yum']['ius-testing-source']['description'] = 'IUS Community Packages fo
 default['yum']['ius-testing-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-testing-source&arch=$basearch&protocol=http'
 ```
 
-``` ruby
+```ruby
 default['yum']['ius-dev']['repositoryid'] = 'ius-dev'
 default['yum']['ius-dev']['enabled'] = false
 default['yum']['ius-dev']['managed'] = false
@@ -138,7 +128,7 @@ default['yum']['ius-dev']['description'] = 'IUS Community Packages for Enterpris
 default['yum']['ius-dev']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-dev&arch=$basearch&protocol=http'
 ```
 
-``` ruby
+```ruby
 default['yum']['ius-dev-debuginfo']['repositoryid'] = 'ius-dev-debuginfo'
 default['yum']['ius-dev-debuginfo']['enabled'] = false
 default['yum']['ius-dev-debuginfo']['managed'] = false
@@ -149,7 +139,7 @@ default['yum']['ius-dev-debuginfo']['description'] = 'IUS Community Packages for
 default['yum']['ius-dev-debuginfo']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-dev-debuginfo&arch=$basearch&protocol=http'
 ```
 
-``` ruby
+```ruby
 default['yum']['ius-dev-source']['repositoryid'] = 'ius-dev-source'
 default['yum']['ius-dev-source']['enabled'] = false
 default['yum']['ius-dev-source']['managed'] = false
@@ -160,12 +150,10 @@ default['yum']['ius-dev-source']['description'] = 'IUS Community Packages for En
 default['yum']['ius-dev-source']['mirrorlist'] = 'https://mirrors.iuscommunity.org/mirrorlist/?repo=ius-el6-dev-source&arch=$basearch&protocol=http'
 ```
 
-
-Recipes
--------
-* default - Walks through node attributes and feeds a yum_resource
-  parameters. The following is an example a resource generated by the
-  recipe during compilation.
+## Recipes
+- default - Walks through node attributes and feeds a yum_resource
+- parameters. The following is an example a resource generated by the
+- recipe during compilation.
 
 ```ruby
   yum_repository 'ius' do
@@ -177,8 +165,7 @@ Recipes
   end
 ```
 
-Usage Example
--------------
+## Usage Example
 To disable the `ius` repository through a Role or Environment definition
 
 ```
@@ -193,10 +180,7 @@ default_attributes(
  )
 ```
 
-Uncommonly used repositoryids are not managed by default. This is
-speeds up integration testing pipelines by avoiding yum-cache builds
-that nobody cares about. To enable the `ius-testing` repository with a
-wrapper cookbook, place the following in a recipe:
+Uncommonly used repositoryids are not managed by default. This is speeds up integration testing pipelines by avoiding yum-cache builds that nobody cares about. To enable the `ius-testing` repository with a wrapper cookbook, place the following in a recipe:
 
 ```
 node.default['yum']['ius-tesing']['managed'] = true
@@ -204,8 +188,7 @@ node.default['yum']['ius-tesing']['enabled'] = true
 include_recipe 'yum-ius'
 ```
 
-More Examples
--------------
+## More Examples
 Point the base and debuginfo repositories at an internally hosted server.
 
 ```
@@ -221,12 +204,11 @@ node.default['yum']['ius-debuginfo']['sslverify'] = false
 include_recipe 'yum-ius'
 ```
 
-License & Authors
------------------
-
-**Author:** Cookbook Engineering Team (<cookbooks@chef.io>)
+## License & Authors
+**Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))
 
 **Copyright:** 2011-2015, Chef Software, Inc.
+
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
