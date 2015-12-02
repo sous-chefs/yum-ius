@@ -1,17 +1,69 @@
 driver:
-  name: vagrant
+  name: dokken
+  chef_version: 12.5.1
+
+transport:
+  name: dokken
 
 provisioner:
-  name: chef_zero
+  name: dokken
+
+verifier:
+  root_path: '/opt/verifier'
+  sudo: false
 
 platforms:
-  - name: centos-5.11
-  - name: centos-6.7
-  - name: centos-7.1
-  - name: fedora-21
-  - name: fedora-22
+- name: centos-5
+  driver:
+    image: centos:5
+
+- name: centos-6
+  driver:
+    image: centos:6
+
+- name: centos-7
+  driver:
+    image: centos:7
 
 suites:
-  - name: default
-    run_list:
-      - recipe[yum-ius::default]
+- name: default
+  run_list:
+  - recipe[yum-ius::default]
+  attributes:
+    yum:
+      ius:
+        enabled: true
+        managed: true
+      ius-debuginfo:
+        enabled: true
+        managed: true
+      ius-source:
+        enabled: true
+        managed: true
+      ius-testing:
+        enabled: true
+        managed: true
+      ius-testing-debuginfo:
+        enabled: true
+        managed: true
+      ius-testing-source:
+        enabled: true
+        managed: true
+      ius-dev:
+        enabled: true
+        managed: true
+      ius-dev-debuginfo:
+        enabled: true
+        managed: true
+      ius-dev-source:
+        enabled: true
+        managed: true
+      ius-archive:
+        enabled: true
+        managed: true
+      ius-archive-debuginfo:
+        enabled: true
+        managed: true
+      ius-archive-source:
+        enabled: true
+        managed: true
