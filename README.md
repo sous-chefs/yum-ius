@@ -168,7 +168,7 @@ default['yum']['ius-dev-source']['mirrorlist'] = 'https://mirrors.iuscommunity.o
 ## Usage Example
 To disable the `ius` repository through a Role or Environment definition
 
-```
+```ruby
 default_attributes(
   :yum => {
     :ius => {
@@ -182,7 +182,7 @@ default_attributes(
 
 Uncommonly used repositoryids are not managed by default. This is speeds up integration testing pipelines by avoiding yum-cache builds that nobody cares about. To enable the `ius-testing` repository with a wrapper cookbook, place the following in a recipe:
 
-```
+```ruby
 node.default['yum']['ius-tesing']['managed'] = true
 node.default['yum']['ius-tesing']['enabled'] = true
 include_recipe 'yum-ius'
@@ -191,7 +191,7 @@ include_recipe 'yum-ius'
 ## More Examples
 Point the base and debuginfo repositories at an internally hosted server.
 
-```
+```ruby
 node.default['yum']['ius']['enabled'] = true
 node.default['yum']['ius']['mirrorlist'] = nil
 node.default['yum']['ius']['baseurl'] = 'https://internal.example.com/centos/6/os/x86_64'
