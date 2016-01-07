@@ -6,7 +6,6 @@ The yum-ius cookbook takes over management of the default repositoryids that shi
 ## Requirements
 ### Platforms
 - RHEL/CentOS and derivatives
-- Fedora
 
 ### Chef
 - Chef 11+
