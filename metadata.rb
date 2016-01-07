@@ -11,6 +11,6 @@ depends 'yum-epel'
 source_url 'https://github.com/chef-cookbooks/yum-ius' if respond_to?(:source_url)
 issues_url 'https://github.com/chef-cookbooks/yum-ius/issues' if respond_to?(:issues_url)
 
-%w(amazon centos fedora oracle redhat scientific).each do |os|
+%w(amazon centos oracle redhat scientific).each do |os|
   supports os
 end
