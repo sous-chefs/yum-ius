@@ -12,7 +12,7 @@ The yum-ius cookbook takes over management of the default repositoryids that shi
 
 ### Chef
 
-- Chef 11+
+- Chef 12+
 
 ### Cookbooks
 
