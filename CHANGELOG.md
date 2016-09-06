@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the yum-ius cookbook.
 
+## 1.0.0 (2016-09-06)
+- Testing updates
+- Add chef_version metadata
+- Remove support for Chef 11
+
 ## v0.4.6 (2016-04-27)
 
 - Remove support for fedora / amazon from metadata as they are not actually supported
