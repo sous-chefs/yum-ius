@@ -12,11 +12,11 @@ The yum-ius cookbook takes over management of the default repositoryids that shi
 
 ### Chef
 
-- Chef 12+
+- Chef 12.1+
 
 ### Cookbooks
 
-- yum version 3.2.0 or higher
+- compat_resource
 - yum-epel
 
 ## Attributes
