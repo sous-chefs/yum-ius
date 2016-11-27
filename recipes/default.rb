@@ -1,6 +1,7 @@
 #
 # Author:: Sean OMeara (<sean@sean.io>)
-# Recipe:: yum-ius::default
+# Cookbook:: yum-ius
+# Recipe:: default
 #
 # Copyright:: 2013-2016, Chef Software, Inc.
 #
