@@ -17,51 +17,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-%w(
-  ius
-  ius-debuginfo
-  ius-source
-  ius-archive
-  ius-archive-debuginfo
-  ius-archive-source
-  ius-testing
-  ius-testing-debuginfo
-  ius-testing-source
-  ius-dev
-  ius-dev-debuginfo
-  ius-dev-source
-).each do |repo|
+node['yum-ius']['repos'].each do |repo|
   next unless node['yum'][repo]['managed']
   include_recipe 'yum-epel' unless run_context.loaded_recipe?('yum-epel')
-
   yum_repository repo do
-    description node['yum'][repo]['description'] unless node['yum'][repo]['description'].nil?
-    baseurl node['yum'][repo]['baseurl'] unless node['yum'][repo]['baseurl'].nil?
-    mirrorlist node['yum'][repo]['mirrorlist'] unless node['yum'][repo]['mirrorlist'].nil?
-    gpgcheck node['yum'][repo]['gpgcheck'] unless node['yum'][repo]['gpgcheck'].nil?
-    gpgkey node['yum'][repo]['gpgkey'] unless node['yum'][repo]['gpgkey'].nil?
-    enabled node['yum'][repo]['enabled'] unless node['yum'][repo]['enabled'].nil?
-    cost node['yum'][repo]['cost'] unless node['yum'][repo]['cost'].nil?
-    exclude node['yum'][repo]['exclude'] unless node['yum'][repo]['exclude'].nil?
-    enablegroups node['yum'][repo]['enablegroups'] unless node['yum'][repo]['enablegroups'].nil?
-    failovermethod node['yum'][repo]['failovermethod'] unless node['yum'][repo]['failovermethod'].nil?
-    http_caching node['yum'][repo]['http_caching'] unless node['yum'][repo]['http_caching'].nil?
-    include_config node['yum'][repo]['include_config'] unless node['yum'][repo]['include_config'].nil?
-    includepkgs node['yum'][repo]['includepkgs'] unless node['yum'][repo]['includepkgs'].nil?
-    keepalive node['yum'][repo]['keepalive'] unless node['yum'][repo]['keepalive'].nil?
-    max_retries node['yum'][repo]['max_retries'] unless node['yum'][repo]['max_retries'].nil?
-    metadata_expire node['yum'][repo]['metadata_expire'] unless node['yum'][repo]['metadata_expire'].nil?
-    mirror_expire node['yum'][repo]['mirror_expire'] unless node['yum'][repo]['mirror_expire'].nil?
-    priority node['yum'][repo]['priority'] unless node['yum'][repo]['priority'].nil?
-    proxy node['yum'][repo]['proxy'] unless node['yum'][repo]['proxy'].nil?
-    proxy_username node['yum'][repo]['proxy_username'] unless node['yum'][repo]['proxy_username'].nil?
-    proxy_password node['yum'][repo]['proxy_password'] unless node['yum'][repo]['proxy_password'].nil?
-    repositoryid node['yum'][repo]['repositoryid'] unless node['yum'][repo]['repositoryid'].nil?
-    sslcacert node['yum'][repo]['sslcacert'] unless node['yum'][repo]['sslcacert'].nil?
-    sslclientcert node['yum'][repo]['sslclientcert'] unless node['yum'][repo]['sslclientcert'].nil?
-    sslclientkey node['yum'][repo]['sslclientkey'] unless node['yum'][repo]['sslclientkey'].nil?
-    sslverify node['yum'][repo]['sslverify'] unless node['yum'][repo]['sslverify'].nil?
-    timeout node['yum'][repo]['timeout'] unless node['yum'][repo]['timeout'].nil?
-    action :create
+    node['yum'][repo].each do |config, value|
+      send(config.to_sym, value) unless value.nil? || config == 'managed'
+    end
   end
 end

@@ -72,7 +72,7 @@ describe 'yum-ius::default' do
       ius-dev-source
     ).each do |repo|
       it "creates yum_repository[#{repo}] with Redhat repo used in mirrorlist" do
-        mirror_repo = repo.sub('ius', 'ius-el6')
+        mirror_repo = repo.sub('ius', 'ius-el$releasever')
         expect(chef_run).to create_yum_repository(repo).with(
           mirrorlist: "https://mirrors.iuscommunity.org/mirrorlist/?repo=#{mirror_repo}&arch=$basearch&protocol=http"
         )
@@ -113,7 +113,7 @@ describe 'yum-ius::default' do
       ius-dev-source
     ).each do |repo|
       it "creates yum_repository[#{repo}] with CentOS repo used in mirrorlist" do
-        mirror_repo = repo.sub('ius', 'ius-centos6')
+        mirror_repo = repo.sub('ius', 'ius-centos$releasever')
         expect(chef_run).to create_yum_repository(repo).with(
           mirrorlist: "https://mirrors.iuscommunity.org/mirrorlist/?repo=#{mirror_repo}&arch=$basearch&protocol=http"
         )
