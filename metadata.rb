@@ -6,7 +6,7 @@ description 'Installs and configures the IUS Community Project Yum Repository'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '2.0.0'
 
-depends 'compat_resource', '>= 12.14.6'
+depends 'compat_resource', '>= 12.16.3'
 depends 'yum-epel'
 
 source_url 'https://github.com/chef-cookbooks/yum-ius'
