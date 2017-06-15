@@ -6,6 +6,7 @@ This file is used to list changes made in each version of the yum-ius cookbook.
 
 - Remove use of releasever to eliminate centos-release dependency.
 - Add warning for use of EL 5 variants as IUS is ending support as of March 31, 2017 following the RHEL EOL of RHEL 5.
+- Update chefspecs to avoid deprecation warnings
 
 ## 2.1.0 (2016-12-22)
 
