@@ -4,7 +4,7 @@ maintainer_email 'cookbooks@chef.io'
 license 'Apache-2.0'
 description 'Installs and configures the IUS Community Project Yum Repository'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '2.1.0'
+version '2.2.0'
 
 %w(centos oracle redhat scientific).each do |os|
   supports os
