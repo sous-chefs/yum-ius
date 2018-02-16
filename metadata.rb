@@ -10,9 +10,8 @@ version '2.2.0'
   supports os
 end
 
-depends 'compat_resource', '>= 12.16.3'
 depends 'yum-epel'
 
 source_url 'https://github.com/chef-cookbooks/yum-ius'
 issues_url 'https://github.com/chef-cookbooks/yum-ius/issues'
-chef_version '>= 12.1' if respond_to?(:chef_version)
+chef_version '>= 12.14' if respond_to?(:chef_version)
