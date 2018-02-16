@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the yum-ius cookbook.
 
+## 3.0.0 (2018-02-16)
+
+- Require Chef 12.14+ and remove the compat_resource dep
+
 ## 2.2.0 (UNRELEASED)
 
 - Remove use of releasever to eliminate centos-release dependency.
