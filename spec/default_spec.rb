@@ -41,7 +41,7 @@ describe 'yum-ius::default' do
 
   context 'yum-ius::default uses Redhat distro for RHEL6' do
     cached(:chef_run) do
-      ChefSpec::SoloRunner.new(platform: 'redhat', version: '6.7') do |node|
+      ChefSpec::SoloRunner.new(platform: 'redhat', version: '6.9') do |node|
         node.override['yum']['ius']['managed'] = true
         node.override['yum']['ius-debuginfo']['managed'] = true
         node.override['yum']['ius-source']['managed'] = true
@@ -82,7 +82,7 @@ describe 'yum-ius::default' do
 
   context 'yum-ius::default uses CentOS distro for CentOS6' do
     cached(:chef_run) do
-      ChefSpec::SoloRunner.new(platform: 'centos', version: '6.8') do |node|
+      ChefSpec::SoloRunner.new(platform: 'centos', version: '6.9') do |node|
         node.override['yum']['ius']['managed'] = true
         node.override['yum']['ius-debuginfo']['managed'] = true
         node.override['yum']['ius-source']['managed'] = true
