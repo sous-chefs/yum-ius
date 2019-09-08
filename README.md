@@ -211,6 +211,10 @@ node.default['yum']['ius-debuginfo']['sslverify'] = false
 include_recipe 'yum-ius'
 ```
 
+## Notes
+
+IUS's new CDN is used where applicable rather than the community 3rd party mirrorlist, see https://github.com/iusrepo/infrastructure/issues/14 for more
+
 ## License & Authors
 
 **Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))
