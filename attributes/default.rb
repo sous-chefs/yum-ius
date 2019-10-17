@@ -8,7 +8,4 @@ default['yum-ius']['repos'] = %w(
   ius-testing
   ius-testing-debuginfo
   ius-testing-source
-  ius-dev
-  ius-dev-debuginfo
-  ius-dev-source
 )

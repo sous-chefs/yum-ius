@@ -37,15 +37,6 @@ suites:
       ius-testing-source:
         enabled: true
         managed: true
-      ius-dev:
-        enabled: true
-        managed: true
-      ius-dev-debuginfo:
-        enabled: true
-        managed: true
-      ius-dev-source:
-        enabled: true
-        managed: true
       ius-archive:
         enabled: true
         managed: true

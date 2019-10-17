@@ -1,4 +1,14 @@
-%w( ius-testing-debuginfo ius-testing-source ius-dev-debuginfo ius ius-debuginfo ius-source ius-archive ius-archive-source ius-archive-debuginfo).each do |repo|
+%w(
+  ius
+  ius-debuginfo
+  ius-source
+  ius-archive
+  ius-archive-debuginfo
+  ius-archive-source
+  ius-testing
+  ius-testing-debuginfo
+  ius-testing-source
+).each do |repo|
   describe file("/etc/yum.repos.d/#{repo}.repo") do
     it { should exist }
     it { should be_owned_by 'root' }
