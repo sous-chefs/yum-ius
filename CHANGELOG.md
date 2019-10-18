@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of the yum-ius cookbook.
 
+## 3.1.0 (2019-10-17)
+
+- Updated all the repos to use the new IUS CDN system. This greatly simplifies our attribute setup and makes sure this cookbook continues to work with the latest mirror setup. - [@gsdevme](https://github.com/gsdevme)
+- Resolve Cookstyle 5.8 warnings - [@tas50](https://github.com/tas50)
+- Remove references to CentOS 5 - [@ramereth](https://github.com/ramereth)
+- Removed the various *dev* repos which don't seem to exist anymore - [@ramereth](https://github.com/ramereth)
+- Fix all other active upstream repos with new baseurl for CDN - [@ramereth](https://github.com/ramereth)
+
 ## 3.0.0 (2018-02-16)
 
 - Require Chef 12.14+ and remove the compat_resource dep

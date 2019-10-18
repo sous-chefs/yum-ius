@@ -3,7 +3,7 @@ maintainer 'Chef Software, Inc.'
 maintainer_email 'cookbooks@chef.io'
 license 'Apache-2.0'
 description 'Installs and configures the IUS Community Project Yum Repository'
-version '3.0.0'
+version '3.1.0'
 
 %w(centos oracle redhat scientific).each do |os|
   supports os
