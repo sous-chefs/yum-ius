@@ -4,6 +4,7 @@ driver:
 provisioner:
   name: chef_zero
   deprecations_as_errors: true
+  chef_license: accept-no-persist
 
 verifier:
   name: inspec
@@ -34,15 +35,6 @@ suites:
         enabled: true
         managed: true
       ius-testing-source:
-        enabled: true
-        managed: true
-      ius-dev:
-        enabled: true
-        managed: true
-      ius-dev-debuginfo:
-        enabled: true
-        managed: true
-      ius-dev-source:
         enabled: true
         managed: true
       ius-archive:
