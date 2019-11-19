@@ -1,7 +1,7 @@
 driver:
   name: dokken
   privileged: true # because Docker and SystemD/Upstart
-  chef_version: current
+  chef_version: <%= ENV['CHEF_VERSION'] || 'current' %>
 
 transport:
   name: dokken
@@ -9,6 +9,7 @@ transport:
 provisioner:
   name: dokken
   deprecations_as_errors: true
+  chef_license: accept-no-persist
 
 verifier:
   name: inspec
@@ -16,42 +17,15 @@ verifier:
 platforms:
 - name: centos-6
   driver:
-    image: centos:6
+    image: dokken/centos-6
+    pid_one_command: /sbin/init
 
 - name: centos-7
   driver:
-    image: centos:7
+    image: dokken/centos-7
+    pid_one_command: /usr/lib/systemd/systemd
 
-suites:
-- name: default
-  run_list:
-  - recipe[yum-ius::default]
-  attributes:
-    yum:
-      ius:
-        enabled: true
-        managed: true
-      ius-debuginfo:
-        enabled: true
-        managed: true
-      ius-source:
-        enabled: true
-        managed: true
-      ius-testing:
-        enabled: true
-        managed: true
-      ius-testing-debuginfo:
-        enabled: true
-        managed: true
-      ius-testing-source:
-        enabled: true
-        managed: true
-      ius-archive:
-        enabled: true
-        managed: true
-      ius-archive-debuginfo:
-        enabled: true
-        managed: true
-      ius-archive-source:
-        enabled: true
-        managed: true
+- name: centos-8
+  driver:
+    image: dokken/centos-8
+    pid_one_command: /usr/lib/systemd/systemd
