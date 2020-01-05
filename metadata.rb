@@ -13,4 +13,4 @@ depends 'yum-epel'
 
 source_url 'https://github.com/chef-cookbooks/yum-ius'
 issues_url 'https://github.com/chef-cookbooks/yum-ius/issues'
-chef_version '>= 12.14'
+chef_version '>= 12.15'
