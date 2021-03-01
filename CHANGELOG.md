@@ -4,7 +4,8 @@ This file is used to list changes made in each version of the yum-ius cookbook.
 
 ## 3.1.0 (2019-10-17)
 
-- Updated all the repos to use the new IUS CDN system. This greatly simplifies our attribute setup and makes sure this cookbook continues to work with the latest mirror setup. - [@gsdevme](https://github.com/gsdevme)
+- Updated all the repos to use the new IUS CDN system. This greatly simplifies our attribute setup and makes sure this cookbook continues to work with the latest mirror setup.
+- [@gsdevme](https://github.com/gsdevme)
 - Resolve Cookstyle 5.8 warnings - [@tas50](https://github.com/tas50)
 - Remove references to CentOS 5 - [@ramereth](https://github.com/ramereth)
 - Removed the various *dev* repos which don't seem to exist anymore - [@ramereth](https://github.com/ramereth)
@@ -27,10 +28,12 @@ This file is used to list changes made in each version of the yum-ius cookbook.
 - Cookstyle fixes
 
 ## 2.0.0 (2016-11-26)
+
 - Replace yum dependency with compat_resource
 - Add inspec integration test
 
 ## 1.0.0 (2016-09-06)
+
 - Testing updates
 - Add chef_version metadata
 - Remove support for Chef 11
@@ -85,8 +88,8 @@ This file is used to list changes made in each version of the yum-ius cookbook.
 
 ## v0.1.4
 
-Adding CHANGELOG.md
+- Adding CHANGELOG.md
 
 ## v0.1.0
 
-initial release
+- initial release
