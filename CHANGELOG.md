@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the yum-ius cookbook.
 
+## Unreleased
+
+- Sous Chefs adoption
+- Various style fixes
+
 ## 3.1.0 (2019-10-17)
 
 - Updated all the repos to use the new IUS CDN system. This greatly simplifies our attribute setup and makes sure this cookbook continues to work with the latest mirror setup.
