@@ -1,17 +1,11 @@
-%w(
-  ius
-  ius-debuginfo
-  ius-source
-  ius-archive
-  ius-archive-debuginfo
-  ius-archive-source
-  ius-testing
-  ius-testing-debuginfo
-  ius-testing-source
-).each do |repo|
-  describe file("/etc/yum.repos.d/#{repo}.repo") do
-    it { should exist }
-    it { should be_owned_by 'root' }
-    it { should be_grouped_into 'root' }
-  end
+describe yum.repo('ius') do
+  it { should be_enabled }
+  it { should exist }
+  its('baseurl') { should cmp "https://repo.ius.io/#{os.release.to_i}/x86_64/" }
+end
+
+describe ini("/etc/yum.repos.d/ius.repo") do
+  its("#{repo}.gpgkey") { should cmp "https://repo.ius.io/RPM-GPG-KEY-IUS-#{e_rel}" }
+  its("#{repo}.gpgcheck") { should cmp 1 }
+  its("#{repo}.failovermethod") { should cmp 'priority' }
 end

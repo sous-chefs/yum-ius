@@ -16,6 +16,9 @@ suites:
   - name: default
     run_list:
       - recipe[yum-ius::default]
+  - name: enable-all
+    run_list:
+      - recipe[yum-ius::default]
     attributes:
       yum:
         ius:
