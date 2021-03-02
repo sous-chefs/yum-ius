@@ -5,7 +5,7 @@ describe yum.repo('ius') do
 end
 
 describe ini("/etc/yum.repos.d/ius.repo") do
-  its("#{repo}.gpgkey") { should cmp "https://repo.ius.io/RPM-GPG-KEY-IUS-#{e_rel}" }
-  its("#{repo}.gpgcheck") { should cmp 1 }
-  its("#{repo}.failovermethod") { should cmp 'priority' }
+  its("ius.gpgkey") { should cmp "https://repo.ius.io/RPM-GPG-KEY-IUS-#{e_rel}" }
+  its("ius.gpgcheck") { should cmp 1 }
+  its("ius.failovermethod") { should cmp 'priority' }
 end

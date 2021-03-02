@@ -43,6 +43,7 @@ jobs:
           - centos-7
         suite:
           - 'default'
+          - 'enable-all'
       fail-fast: false
 
     steps:
