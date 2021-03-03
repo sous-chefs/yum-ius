@@ -2,6 +2,8 @@
 
 This file is used to list changes made in each version of the yum-ius cookbook.
 
+## Unreleased
+
 ## 3.2.0 - *2021-03-03*
 
 - Sous Chefs adoption
