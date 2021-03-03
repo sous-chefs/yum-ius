@@ -10,40 +10,41 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos-6
   - name: centos-7
-  - name: centos-8
 
 suites:
-- name: default
-  run_list:
-  - recipe[yum-ius::default]
-  attributes:
-    yum:
-      ius:
-        enabled: true
-        managed: true
-      ius-debuginfo:
-        enabled: true
-        managed: true
-      ius-source:
-        enabled: true
-        managed: true
-      ius-testing:
-        enabled: true
-        managed: true
-      ius-testing-debuginfo:
-        enabled: true
-        managed: true
-      ius-testing-source:
-        enabled: true
-        managed: true
-      ius-archive:
-        enabled: true
-        managed: true
-      ius-archive-debuginfo:
-        enabled: true
-        managed: true
-      ius-archive-source:
-        enabled: true
-        managed: true
+  - name: default
+    run_list:
+      - recipe[yum-ius::default]
+  - name: enable-all
+    run_list:
+      - recipe[yum-ius::default]
+    attributes:
+      yum:
+        ius:
+          enabled: true
+          managed: true
+        ius-debuginfo:
+          enabled: true
+          managed: true
+        ius-source:
+          enabled: true
+          managed: true
+        ius-testing:
+          enabled: true
+          managed: true
+        ius-testing-debuginfo:
+          enabled: true
+          managed: true
+        ius-testing-source:
+          enabled: true
+          managed: true
+        ius-archive:
+          enabled: true
+          managed: true
+        ius-archive-debuginfo:
+          enabled: true
+          managed: true
+        ius-archive-source:
+          enabled: true
+          managed: true
