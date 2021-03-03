@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the yum-ius cookbook.
 
-## Unreleased
+## 3.2.0 - *2021-03-03*
 
 - Sous Chefs adoption
 - Various style fixes
@@ -20,7 +20,7 @@ This file is used to list changes made in each version of the yum-ius cookbook.
 
 - Require Chef 12.14+ and remove the compat_resource dep
 
-## 2.2.0 (UNRELEASED)
+## 2.2.0 (3.2.0 - *2021-03-03*)
 
 - Remove use of releasever to eliminate centos-release dependency.
 - Add warning for use of EL 5 variants as IUS is ending support as of March 31, 2017 following the RHEL EOL of RHEL 5.
