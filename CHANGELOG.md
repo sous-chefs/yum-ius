@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the yum-ius cookbook.
 
-## Unreleased
+## 3.2.1 - *2021-06-01*
 
 ## 3.2.0 - *2021-03-03*
 
