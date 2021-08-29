@@ -4,9 +4,11 @@ This file is used to list changes made in each version of the yum-ius cookbook.
 
 ## Unreleased
 
-Standardise files with files in sous-chefs/repo-management
+- Standardise files with files in sous-chefs/repo-management
 
 ## 3.2.1 - *2021-06-01*
+
+- Standardise files with files in sous-chefs/repo-management
 
 ## 3.2.0 - *2021-03-03*
 
