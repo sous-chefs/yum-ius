@@ -4,9 +4,15 @@ This file is used to list changes made in each version of the yum-ius cookbook.
 
 ## Unreleased
 
+- Fix CI
+
 ## 3.2.4 - *2023-02-14*
 
+- Add renovate.json
+
 ## 3.2.3 - *2023-02-14*
+
+- Remove Delivery
 
 ## 3.2.2 - *2021-08-29*
 
