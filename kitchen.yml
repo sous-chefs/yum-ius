@@ -2,9 +2,11 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_zero
-  deprecations_as_errors: true
+  name: chef_infra
   chef_license: accept-no-persist
+  enforce_idempotency: true
+  multiple_converge: 2
+  deprecations_as_errors: true
 
 verifier:
   name: inspec
