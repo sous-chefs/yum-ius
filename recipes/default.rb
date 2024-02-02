@@ -19,7 +19,7 @@
 
 Chef::Log.warn 'IUS no longer supports EL 5 packages as RHEL 5 has been EOLed.' if node['platform_version'].to_i == 5
 
-node['yum-ius']['repos'].each do |repo|
+node.default['yum-ius']['repos'].each do |repo|
   next unless node['yum'][repo]['managed']
   include_recipe 'yum-epel' unless run_context.loaded_recipe?('yum-epel')
   yum_repository repo do
