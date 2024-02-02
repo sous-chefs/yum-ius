@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the yum-ius cookbook.
 
+## Unreleased
+
+- Fix accessing the `default['yum-ius']['repos']` attribute
+
 ## 3.2.7 - *2023-07-10*
 
 ## 3.2.6 - *2023-05-17*
