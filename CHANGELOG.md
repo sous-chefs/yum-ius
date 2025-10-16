@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the yum-ius cookbook.
 
+## [3.2.15](https://github.com/sous-chefs/yum-ius/compare/3.2.14...v3.2.15) (2025-10-16)
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#53](https://github.com/sous-chefs/yum-ius/issues/53)) ([0f73232](https://github.com/sous-chefs/yum-ius/commit/0f7323225f7e0c98d00be10caac7f77745fe5a1f))
+
 ## 3.2.11 - *2024-02-02*
 
 * Fix accessing the `default['yum-ius']['repos']` attribute
