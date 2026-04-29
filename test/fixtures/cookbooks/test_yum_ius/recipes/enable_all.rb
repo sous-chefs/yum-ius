@@ -1,4 +1,4 @@
-default['yum-ius']['repos'] = %w(
+%w(
   ius
   ius-debuginfo
   ius-source
@@ -8,4 +8,8 @@ default['yum-ius']['repos'] = %w(
   ius-testing
   ius-testing-debuginfo
   ius-testing-source
-)
+).each do |repo|
+  yum_ius_repository repo do
+    enabled true
+  end
+end

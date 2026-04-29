@@ -6,11 +6,11 @@ description       'Installs and configures the IUS Community Project Yum Reposit
 version           '3.2.15'
 source_url        'https://github.com/sous-chefs/yum-ius'
 issues_url        'https://github.com/sous-chefs/yum-ius/issues'
-chef_version      '>= 12.15'
+chef_version      '>= 15.3'
 
 depends 'yum-epel'
 
-supports 'centos'
-supports 'oracle'
-supports 'redhat'
-supports 'scientific'
+supports 'centos', '~> 7.0'
+supports 'oracle', '~> 7.0'
+supports 'redhat', '~> 7.0'
+supports 'scientific', '~> 7.0'

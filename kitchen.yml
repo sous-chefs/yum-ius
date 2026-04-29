@@ -3,7 +3,8 @@ driver:
 
 provisioner:
   name: chef_infra
-  chef_license: accept-no-persist
+  product_name: cinc
+  install_strategy: skip
   enforce_idempotency: true
   multiple_converge: 2
   deprecations_as_errors: true
@@ -13,40 +14,12 @@ verifier:
 
 platforms:
   - name: centos-7
+  - name: oraclelinux-7
 
 suites:
   - name: default
     run_list:
-      - recipe[yum-ius::default]
+      - recipe[test_yum_ius::default]
   - name: enable-all
     run_list:
-      - recipe[yum-ius::default]
-    attributes:
-      yum:
-        ius:
-          enabled: true
-          managed: true
-        ius-debuginfo:
-          enabled: true
-          managed: true
-        ius-source:
-          enabled: true
-          managed: true
-        ius-testing:
-          enabled: true
-          managed: true
-        ius-testing-debuginfo:
-          enabled: true
-          managed: true
-        ius-testing-source:
-          enabled: true
-          managed: true
-        ius-archive:
-          enabled: true
-          managed: true
-        ius-archive-debuginfo:
-          enabled: true
-          managed: true
-        ius-archive-source:
-          enabled: true
-          managed: true
+      - recipe[test_yum_ius::enable_all]
